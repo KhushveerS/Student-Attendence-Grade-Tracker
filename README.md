@@ -14,6 +14,14 @@ A comprehensive web application for tracking student grades, attendance, and per
 - **Bulk Import**: Import student data from CSV files
 - **Local Storage**: All data is persisted in the browser's local storage
 
+
+## ScreenShots
+
+<img width="1510" height="749" alt="Screenshot 2025-10-05 220845" src="https://github.com/user-attachments/assets/4ef55226-5194-4250-9c38-6ee8de561fec" />
+
+<img width="1494" height="878" alt="Screenshot 2025-10-05 220910" src="https://github.com/user-attachments/assets/95e3ac4d-49a1-475d-9dd1-ac435d167ad9" />
+
+
 ## Tech Stack
 
 - **Frontend**: React with TypeScript
