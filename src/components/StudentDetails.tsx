@@ -58,11 +58,11 @@ export default function StudentDetails({
             </div>
             <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
               <p className="text-gray-400 text-sm mb-1">Percentage</p>
-              <p className="text-2xl font-bold text-green-400">{stats.percentage.toFixed(2)}%</p>
+              <p className="text-2xl font-bold text-[#4ade80]">{stats.percentage.toFixed(2)}%</p>
             </div>
             <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
               <p className="text-gray-400 text-sm mb-1">GPA</p>
-              <p className="text-2xl font-bold text-blue-400">{stats.gpa.toFixed(2)}</p>
+              <p className="text-2xl font-bold text-[#3b82f6]">{stats.gpa.toFixed(2)}</p>
             </div>
             <div className="bg-gray-800 rounded-lg p-4 border border-gray-700">
               <p className="text-gray-400 text-sm mb-1">Overall Grade</p>
@@ -75,7 +75,7 @@ export default function StudentDetails({
               onClick={() => setActiveTab('subjects')}
               className={`px-4 py-2 font-medium transition-all ${
                 activeTab === 'subjects'
-                  ? 'text-green-400 border-b-2 border-green-400'
+                  ? 'text-[#4ade80] border-b-2 border-[#4ade80]'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -85,7 +85,7 @@ export default function StudentDetails({
               onClick={() => setActiveTab('attendance')}
               className={`px-4 py-2 font-medium transition-all ${
                 activeTab === 'attendance'
-                  ? 'text-green-400 border-b-2 border-green-400'
+                  ? 'text-[#4ade80] border-b-2 border-[#4ade80]'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -95,7 +95,7 @@ export default function StudentDetails({
               onClick={() => setActiveTab('remarks')}
               className={`px-4 py-2 font-medium transition-all ${
                 activeTab === 'remarks'
-                  ? 'text-green-400 border-b-2 border-green-400'
+                  ? 'text-[#4ade80] border-b-2 border-[#4ade80]'
                   : 'text-gray-400 hover:text-white'
               }`}
             >
@@ -109,7 +109,7 @@ export default function StudentDetails({
                 <h3 className="text-xl font-bold text-white">Subjects</h3>
                 <button
                   onClick={onExport}
-                  className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors font-medium"
+                  className="flex items-center gap-2 px-4 py-2 bg-[#4ade80] hover:bg-[#22c55e] text-black rounded-lg transition-colors font-medium"
                 >
                   <Download className="w-4 h-4" />
                   Export Report
@@ -146,7 +146,7 @@ export default function StudentDetails({
                             <td className="px-4 py-3 text-white font-medium">{subject.subjectName}</td>
                             <td className="px-4 py-3 text-center text-white">{subject.marks}</td>
                             <td className="px-4 py-3 text-center text-gray-400">{subject.maxMarks}</td>
-                            <td className="px-4 py-3 text-center text-green-400 font-semibold">
+                            <td className="px-4 py-3 text-center text-[#4ade80] font-semibold">
                               {percentage.toFixed(2)}%
                             </td>
                             <td className="px-4 py-3 text-center">
@@ -158,7 +158,7 @@ export default function StudentDetails({
                               <div className="flex items-center justify-center gap-2">
                                 <button
                                   onClick={() => onEditSubject(subject.id)}
-                                  className="p-1.5 text-blue-400 hover:bg-blue-400/10 rounded transition-colors"
+                                  className="p-1.5 text-[#3b82f6] hover:bg-[#3b82f6]/10 rounded transition-colors"
                                   title="Edit"
                                 >
                                   <Edit2 className="w-4 h-4" />

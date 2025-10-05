@@ -19,11 +19,11 @@ export default function Leaderboard({ students, onSelectStudent }: LeaderboardPr
   const getRankIcon = (rank: number) => {
     switch (rank) {
       case 1:
-        return <Trophy className="w-6 h-6 text-yellow-400" />;
+        return <Trophy className="w-6 h-6 text-white" />;
       case 2:
-        return <Medal className="w-6 h-6 text-gray-400" />;
+        return <Medal className="w-6 h-6 text-white" />;
       case 3:
-        return <Award className="w-6 h-6 text-amber-600" />;
+        return <Award className="w-6 h-6 text-white" />;
       default:
         return null;
     }
@@ -65,7 +65,7 @@ export default function Leaderboard({ students, onSelectStudent }: LeaderboardPr
                 className={`p-4 rounded-lg border transition-all cursor-pointer ${
                   rank <= 3
                     ? 'border-yellow-500/30 bg-gradient-to-r from-gray-900 to-gray-800 hover:border-yellow-500/50'
-                    : 'border-gray-800 bg-gray-900 hover:border-green-500/50'
+                    : 'border-gray-800 bg-gray-900 hover:border-[#4ade80]/50'
                 }`}
               >
                 <div className="flex items-center gap-4">
@@ -89,19 +89,22 @@ export default function Leaderboard({ students, onSelectStudent }: LeaderboardPr
                     <div className="flex items-center gap-4 text-sm text-gray-400">
                       <span>Roll: {student.rollNumber}</span>
                       <span>Class: {student.class}</span>
-                      <span className="text-green-400 font-semibold">{stats.percentage.toFixed(2)}%</span>
+                      <span className="text-[#4ade80] font-semibold">{stats.percentage.toFixed(2)}%</span>
                     </div>
                   </div>
 
                   <div className="text-right flex-shrink-0">
-                    <div className="text-2xl font-bold text-yellow-400">{stats.overallGrade}</div>
-                    <div className="text-xs text-gray-400">GPA: {stats.gpa.toFixed(2)}</div>
+                  <div className="text-2xl bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+  {stats.overallGrade}
+</div>
+
+                    <div className="text-xs text-white mt-1">GPA: {stats.gpa.toFixed(2)}</div>
                   </div>
                 </div>
 
                 <div className="mt-3 h-2 bg-gray-800 rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-500"
+                    className="h-full bg-gradient-to-r from-[#4ade80] to-[#22c55e] rounded-full transition-all duration-500"
                     style={{ width: `${Math.min(stats.percentage, 100)}%` }}
                   />
                 </div>
@@ -120,8 +123,8 @@ export default function Leaderboard({ students, onSelectStudent }: LeaderboardPr
             </p>
             <p className="text-xs text-gray-400 mt-1">Highest Score</p>
           </div>
-          <div className="bg-gradient-to-br from-blue-600/20 to-blue-700/20 border border-blue-500/30 rounded-lg p-4 text-center">
-            <Award className="w-8 h-8 text-blue-400 mx-auto mb-2" />
+          <div className="bg-gradient-to-br from-[#3b82f6]/20 to-[#2563eb]/20 border border-[#3b82f6]/30 rounded-lg p-4 text-center">
+            <Award className="w-8 h-8 text-[#3b82f6] mx-auto mb-2" />
             <p className="text-2xl font-bold text-white">
               {(
                 rankedStudents.reduce((sum, { stats }) => sum + stats.percentage, 0) /
@@ -131,8 +134,8 @@ export default function Leaderboard({ students, onSelectStudent }: LeaderboardPr
             </p>
             <p className="text-xs text-gray-400 mt-1">Average Score</p>
           </div>
-          <div className="bg-gradient-to-br from-green-600/20 to-green-700/20 border border-green-500/30 rounded-lg p-4 text-center">
-            <Medal className="w-8 h-8 text-green-400 mx-auto mb-2" />
+          <div className="bg-gradient-to-br from-[#4ade80]/20 to-[#22c55e]/20 border border-[#4ade80]/30 rounded-lg p-4 text-center">
+            <Medal className="w-8 h-8 text-[#4ade80] mx-auto mb-2" />
             <p className="text-2xl font-bold text-white">{rankedStudents.length}</p>
             <p className="text-xs text-gray-400 mt-1">Total Ranked</p>
           </div>

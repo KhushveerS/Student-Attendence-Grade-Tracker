@@ -24,7 +24,7 @@ export default function SubjectForm({ subject, onSubmit, onCancel }: SubjectForm
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-md w-full border border-gray-800">
         <div className="flex items-center justify-between p-6 border-b border-gray-800">
-          <h2 className="text-xl font-bold text-blue-400">
+          <h2 className="text-xl font-bold text-[#3b82f6]">
             {subject ? 'Edit Subject' : 'Add New Subject'}
           </h2>
           <button
@@ -45,7 +45,7 @@ export default function SubjectForm({ subject, onSubmit, onCancel }: SubjectForm
               required
               value={formData.subjectName}
               onChange={(e) => setFormData({ ...formData, subjectName: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent outline-none transition-all"
               placeholder="e.g., Mathematics"
             />
           </div>
@@ -61,7 +61,7 @@ export default function SubjectForm({ subject, onSubmit, onCancel }: SubjectForm
               max={formData.maxMarks}
               value={formData.marks}
               onChange={(e) => setFormData({ ...formData, marks: parseFloat(e.target.value) || 0 })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent outline-none transition-all"
               placeholder="Enter marks"
             />
           </div>
@@ -76,7 +76,7 @@ export default function SubjectForm({ subject, onSubmit, onCancel }: SubjectForm
               min="1"
               value={formData.maxMarks}
               onChange={(e) => setFormData({ ...formData, maxMarks: parseFloat(e.target.value) || 100 })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent outline-none transition-all"
               placeholder="Enter max marks"
             />
           </div>
@@ -91,7 +91,7 @@ export default function SubjectForm({ subject, onSubmit, onCancel }: SubjectForm
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="flex-1 px-4 py-2 bg-[#3b82f6] text-white rounded-lg hover:bg-[#2563eb] transition-colors font-medium"
             >
               {subject ? 'Update' : 'Add'} Subject
             </button>

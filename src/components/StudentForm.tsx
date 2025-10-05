@@ -26,7 +26,7 @@ export default function StudentForm({ student, onSubmit, onCancel }: StudentForm
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-md w-full border border-gray-800">
         <div className="flex items-center justify-between p-6 border-b border-gray-800">
-          <h2 className="text-xl font-bold text-green-400">
+          <h2 className="text-xl font-bold text-[#4ade80]">
             {student ? 'Edit Student' : 'Add New Student'}
           </h2>
           <button
@@ -47,7 +47,7 @@ export default function StudentForm({ student, onSubmit, onCancel }: StudentForm
               required
               value={formData.name}
               onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#4ade80] focus:border-transparent outline-none transition-all"
               placeholder="Enter student name"
             />
           </div>
@@ -61,7 +61,7 @@ export default function StudentForm({ student, onSubmit, onCancel }: StudentForm
               required
               value={formData.rollNumber}
               onChange={(e) => setFormData({ ...formData, rollNumber: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#4ade80] focus:border-transparent outline-none transition-all"
               placeholder="Enter roll number"
               disabled={!!student}
             />
@@ -76,7 +76,7 @@ export default function StudentForm({ student, onSubmit, onCancel }: StudentForm
               required
               value={formData.class}
               onChange={(e) => setFormData({ ...formData, class: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#4ade80] focus:border-transparent outline-none transition-all"
               placeholder="e.g., 10th Grade"
             />
           </div>
@@ -89,7 +89,7 @@ export default function StudentForm({ student, onSubmit, onCancel }: StudentForm
               type="email"
               value={formData.email}
               onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#4ade80] focus:border-transparent outline-none transition-all"
               placeholder="student@example.com"
             />
           </div>
@@ -102,7 +102,7 @@ export default function StudentForm({ student, onSubmit, onCancel }: StudentForm
               type="tel"
               value={formData.parentContact}
               onChange={(e) => setFormData({ ...formData, parentContact: e.target.value })}
-              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+              className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#4ade80] focus:border-transparent outline-none transition-all"
               placeholder="+1234567890"
             />
           </div>
@@ -117,7 +117,7 @@ export default function StudentForm({ student, onSubmit, onCancel }: StudentForm
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors font-medium"
+              className="flex-1 px-4 py-2 bg-[#4ade80] text-black rounded-lg hover:bg-[#22c55e] transition-colors font-medium"
             >
               {student ? 'Update' : 'Add'} Student
             </button>

@@ -14,7 +14,7 @@ export default function StudentCard({ student, onEdit, onDelete, onAddSubject, o
   const stats = calculateStudentStats(student);
 
   return (
-    <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-green-500/50 transition-all">
+    <div className="bg-gray-900 border border-gray-800 rounded-lg p-6 hover:border-[#4ade80]/50 transition-all">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
           <h3 className="text-xl font-bold text-white mb-1">{student.name}</h3>
@@ -27,7 +27,7 @@ export default function StudentCard({ student, onEdit, onDelete, onAddSubject, o
         <div className="flex gap-2">
           <button
             onClick={onEdit}
-            className="p-2 text-blue-400 hover:bg-blue-400/10 rounded-lg transition-colors"
+            className="p-2 text-[#3b82f6] hover:bg-[#3b82f6]/10 rounded-lg transition-colors"
             title="Edit Student"
           >
             <Edit2 className="w-4 h-4" />
@@ -58,11 +58,11 @@ export default function StudentCard({ student, onEdit, onDelete, onAddSubject, o
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-400 text-sm">Percentage</span>
-              <span className="text-green-400 font-bold">{stats.percentage.toFixed(2)}%</span>
+              <span className="text-[#4ade80] font-bold">{stats.percentage.toFixed(2)}%</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-400 text-sm">GPA</span>
-              <span className="text-blue-400 font-bold">{stats.gpa.toFixed(2)}</span>
+              <span className="text-[#3b82f6] font-bold">{stats.gpa.toFixed(2)}</span>
             </div>
             <div className="flex justify-between items-center">
               <span className="text-gray-400 text-sm">Grade</span>
@@ -75,7 +75,7 @@ export default function StudentCard({ student, onEdit, onDelete, onAddSubject, o
       <div className="flex gap-2">
         <button
           onClick={onAddSubject}
-          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors font-medium"
+          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 bg-[#3b82f6] hover:bg-[#2563eb] text-white rounded-lg transition-colors font-medium"
         >
           <Plus className="w-4 h-4" />
           Add Subject

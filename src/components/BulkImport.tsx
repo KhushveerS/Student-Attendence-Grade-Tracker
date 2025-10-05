@@ -40,7 +40,7 @@ export default function BulkImport({ onClose, onImportComplete }: BulkImportProp
     <div className="fixed inset-0 bg-black/80 flex items-center justify-center z-50 p-4">
       <div className="bg-gray-900 rounded-lg shadow-xl max-w-2xl w-full border border-gray-800">
         <div className="flex items-center justify-between p-6 border-b border-gray-800">
-          <h2 className="text-xl font-bold text-green-400">Bulk Import Students</h2>
+          <h2 className="text-xl font-bold text-[#4ade80]">Bulk Import Students</h2>
           <button
             onClick={onClose}
             className="text-gray-400 hover:text-white transition-colors"
@@ -50,8 +50,8 @@ export default function BulkImport({ onClose, onImportComplete }: BulkImportProp
         </div>
 
         <div className="p-6 space-y-6">
-          <div className="bg-blue-500/10 border border-blue-500/30 rounded-lg p-4">
-            <h3 className="text-blue-400 font-semibold mb-2 flex items-center gap-2">
+          <div className="bg-[#3b82f6]/10 border border-[#3b82f6]/30 rounded-lg p-4">
+            <h3 className="text-[#3b82f6] font-semibold mb-2 flex items-center gap-2">
               <AlertCircle className="w-5 h-5" />
               Instructions
             </h3>
@@ -75,7 +75,7 @@ export default function BulkImport({ onClose, onImportComplete }: BulkImportProp
             <button
               onClick={() => fileInputRef.current?.click()}
               disabled={importing}
-              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
+              className="flex-1 flex items-center justify-center gap-2 px-4 py-3 bg-[#4ade80] hover:bg-[#22c55e] text-black rounded-lg transition-colors font-medium disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <Upload className="w-5 h-5" />
               {importing ? 'Importing...' : 'Upload CSV'}
@@ -92,8 +92,8 @@ export default function BulkImport({ onClose, onImportComplete }: BulkImportProp
           {result && (
             <div className="space-y-3">
               {result.success > 0 && (
-                <div className="bg-green-500/10 border border-green-500/30 rounded-lg p-4">
-                  <div className="flex items-center gap-2 text-green-400 font-semibold mb-2">
+                <div className="bg-[#4ade80]/10 border border-[#4ade80]/30 rounded-lg p-4">
+                  <div className="flex items-center gap-2 text-[#4ade80] font-semibold mb-2">
                     <CheckCircle className="w-5 h-5" />
                     Success
                   </div>

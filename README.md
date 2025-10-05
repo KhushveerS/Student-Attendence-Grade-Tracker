@@ -32,6 +32,15 @@ A comprehensive web application for tracking student grades, attendance, and per
 - **Build Tool**: Vite
 - **Data Persistence**: Browser Local Storage
 
+## Color Theme
+
+The application uses a modern dark theme with the following color palette:
+
+- **Primary**: Deep Green (#4ade80)
+- **Accent**: Vibrant Blue (#3b82f6)
+- **Background**: Rich Black (#000000)
+- **Text**: Clean White (#ffffff)
+
 ## Getting Started
 
 ### Prerequisites

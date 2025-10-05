@@ -3,9 +3,16 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    --primary: #4ade80;
+    --accent: #3b82f6;
+    --background: #000000;
+    --text: #ffffff;
+  }
+
   * {
     scrollbar-width: thin;
-    scrollbar-color: #22c55e #1f2937;
+    scrollbar-color: #4ade80 #000000;
   }
 
   *::-webkit-scrollbar {
@@ -14,15 +21,15 @@
   }
 
   *::-webkit-scrollbar-track {
-    background: #1f2937;
+    background: #000000;
   }
 
   *::-webkit-scrollbar-thumb {
-    background: #22c55e;
+    background: #4ade80;
     border-radius: 4px;
   }
 
   *::-webkit-scrollbar-thumb:hover {
-    background: #16a34a;
+    background: #22c55e;
   }
 }

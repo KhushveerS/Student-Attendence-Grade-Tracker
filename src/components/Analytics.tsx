@@ -9,7 +9,7 @@ export default function Analytics({ analytics }: AnalyticsProps) {
   return (
     <div className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-blue-600 to-green-600 rounded-lg p-6 text-white">
           <div className="flex items-center justify-between mb-2">
             <Users className="w-8 h-8 opacity-80" />
             <span className="text-sm font-medium opacity-80">Total Students</span>
@@ -17,7 +17,7 @@ export default function Analytics({ analytics }: AnalyticsProps) {
           <p className="text-3xl font-bold">{analytics.totalStudents}</p>
         </div>
 
-        <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-green-500 to-green-800 rounded-lg p-6 text-white">
           <div className="flex items-center justify-between mb-2">
             <TrendingUp className="w-8 h-8 opacity-80" />
             <span className="text-sm font-medium opacity-80">Class Average</span>
@@ -25,7 +25,7 @@ export default function Analytics({ analytics }: AnalyticsProps) {
           <p className="text-3xl font-bold">{analytics.classAverage.toFixed(2)}%</p>
         </div>
 
-        <div className="bg-gradient-to-br from-yellow-600 to-yellow-700 rounded-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-green-600 to-blue-600 rounded-lg p-6 text-white">
           <div className="flex items-center justify-between mb-2">
             <Award className="w-8 h-8 opacity-80" />
             <span className="text-sm font-medium opacity-80">Top Scorer</span>
@@ -40,7 +40,7 @@ export default function Analytics({ analytics }: AnalyticsProps) {
           )}
         </div>
 
-        <div className="bg-gradient-to-br from-red-600 to-red-700 rounded-lg p-6 text-white">
+        <div className="bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg p-6 text-white">
           <div className="flex items-center justify-between mb-2">
             <TrendingDown className="w-8 h-8 opacity-80" />
             <span className="text-sm font-medium opacity-80">Needs Support</span>
@@ -71,7 +71,7 @@ export default function Analytics({ analytics }: AnalyticsProps) {
                     </div>
                     <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-green-500 to-green-400 rounded-full transition-all duration-500"
+                        className="h-full bg-gradient-to-r from-[#4ade80] to-[#22c55e] rounded-full transition-all duration-500"
                         style={{ width: `${percentage}%` }}
                       />
                     </div>
@@ -94,11 +94,11 @@ export default function Analytics({ analytics }: AnalyticsProps) {
                   <div key={item.subject}>
                     <div className="flex items-center justify-between mb-1">
                       <span className="text-white font-medium truncate">{item.subject}</span>
-                      <span className="text-blue-400 font-bold ml-2">{item.average.toFixed(1)}%</span>
+                      <span className="text-[#3b82f6] font-bold ml-2">{item.average.toFixed(1)}%</span>
                     </div>
                     <div className="h-3 bg-gray-800 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-blue-500 to-blue-400 rounded-full transition-all duration-500"
+                        className="h-full bg-gradient-to-r from-[#3b82f6] to-[#2563eb] rounded-full transition-all duration-500"
                         style={{ width: `${item.average}%` }}
                       />
                     </div>

@@ -26,11 +26,11 @@ export default function RemarksSection({ remarks, onAddRemark, onDeleteRemark }:
   const getRemarkIcon = (type: string) => {
     switch (type) {
       case 'positive':
-        return <ThumbsUp className="w-4 h-4 text-green-400" />;
+        return <ThumbsUp className="w-4 h-4 text-[#4ade80]" />;
       case 'negative':
         return <ThumbsDown className="w-4 h-4 text-red-400" />;
       case 'neutral':
-        return <AlertCircle className="w-4 h-4 text-blue-400" />;
+        return <AlertCircle className="w-4 h-4 text-[#3b82f6]" />;
       default:
         return null;
     }
@@ -39,11 +39,11 @@ export default function RemarksSection({ remarks, onAddRemark, onDeleteRemark }:
   const getRemarkColor = (type: string) => {
     switch (type) {
       case 'positive':
-        return 'border-green-500/30 bg-green-500/5';
+        return 'border-[#4ade80]/30 bg-[#4ade80]/5';
       case 'negative':
         return 'border-red-500/30 bg-red-500/5';
       case 'neutral':
-        return 'border-blue-500/30 bg-blue-500/5';
+        return 'border-[#3b82f6]/30 bg-[#3b82f6]/5';
       default:
         return 'border-gray-700';
     }
@@ -53,12 +53,12 @@ export default function RemarksSection({ remarks, onAddRemark, onDeleteRemark }:
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-bold text-white flex items-center gap-2">
-          <MessageSquare className="w-5 h-5 text-blue-400" />
+          <MessageSquare className="w-5 h-5 text-[#3b82f6]" />
           Remarks & Comments
         </h3>
         <button
           onClick={() => setShowForm(!showForm)}
-          className="flex items-center gap-2 px-3 py-1.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg transition-colors text-sm font-medium"
+          className="flex items-center gap-2 px-3 py-1.5 bg-[#3b82f6] hover:bg-[#2563eb] text-white rounded-lg transition-colors text-sm font-medium"
         >
           <Plus className="w-4 h-4" />
           Add Remark
@@ -75,8 +75,8 @@ export default function RemarksSection({ remarks, onAddRemark, onDeleteRemark }:
                 onClick={() => setRemarkType('positive')}
                 className={`p-2 rounded-lg border transition-all ${
                   remarkType === 'positive'
-                    ? 'border-green-500 bg-green-500/20 text-green-400'
-                    : 'border-gray-700 text-gray-400 hover:border-green-500/50'
+                    ? 'border-[#4ade80] bg-[#4ade80]/20 text-[#4ade80]'
+                    : 'border-gray-700 text-gray-400 hover:border-[#4ade80]/50'
                 }`}
               >
                 <ThumbsUp className="w-4 h-4 mx-auto mb-1" />
@@ -87,8 +87,8 @@ export default function RemarksSection({ remarks, onAddRemark, onDeleteRemark }:
                 onClick={() => setRemarkType('neutral')}
                 className={`p-2 rounded-lg border transition-all ${
                   remarkType === 'neutral'
-                    ? 'border-blue-500 bg-blue-500/20 text-blue-400'
-                    : 'border-gray-700 text-gray-400 hover:border-blue-500/50'
+                    ? 'border-[#3b82f6] bg-[#3b82f6]/20 text-[#3b82f6]'
+                    : 'border-gray-700 text-gray-400 hover:border-[#3b82f6]/50'
                 }`}
               >
                 <AlertCircle className="w-4 h-4 mx-auto mb-1" />
@@ -114,7 +114,7 @@ export default function RemarksSection({ remarks, onAddRemark, onDeleteRemark }:
             <textarea
               value={remarkText}
               onChange={(e) => setRemarkText(e.target.value)}
-              className="w-full px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-none"
+              className="w-full px-3 py-2 bg-gray-900 border border-gray-700 rounded-lg text-white focus:ring-2 focus:ring-[#3b82f6] focus:border-transparent outline-none transition-all resize-none"
               rows={3}
               placeholder="Enter your remark or comment..."
               required
@@ -135,7 +135,7 @@ export default function RemarksSection({ remarks, onAddRemark, onDeleteRemark }:
             </button>
             <button
               type="submit"
-              className="flex-1 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium"
+              className="flex-1 px-4 py-2 bg-[#3b82f6] text-white rounded-lg hover:bg-[#2563eb] transition-colors font-medium"
             >
               Add Remark
             </button>

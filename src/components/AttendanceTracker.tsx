@@ -16,13 +16,13 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'present':
-        return <CheckCircle className="w-4 h-4 text-green-400" />;
+        return <CheckCircle className="w-4 h-4 text-[#4ade80]" />;
       case 'absent':
         return <XCircle className="w-4 h-4 text-red-400" />;
       case 'late':
         return <Clock className="w-4 h-4 text-yellow-400" />;
       case 'excused':
-        return <FileText className="w-4 h-4 text-blue-400" />;
+        return <FileText className="w-4 h-4 text-[#3b82f6]" />;
       default:
         return null;
     }
@@ -31,13 +31,13 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'present':
-        return 'bg-green-500';
+        return 'bg-[#4ade80]';
       case 'absent':
         return 'bg-red-500';
       case 'late':
         return 'bg-yellow-500';
       case 'excused':
-        return 'bg-blue-500';
+        return 'bg-[#3b82f6]';
       default:
         return 'bg-gray-500';
     }
@@ -47,11 +47,11 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
     <div className="space-y-4">
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-bold text-white flex items-center gap-2">
-          <Calendar className="w-5 h-5 text-green-400" />
+          <Calendar className="w-5 h-5 text-[#4ade80]" />
           Attendance Tracker
         </h3>
         <div className="text-right">
-          <p className="text-2xl font-bold text-green-400">{attendanceRate}%</p>
+          <p className="text-2xl font-bold text-[#4ade80]">{attendanceRate}%</p>
           <p className="text-xs text-gray-400">Attendance Rate</p>
         </div>
       </div>
@@ -59,10 +59,10 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
       <div className="grid grid-cols-4 gap-2">
         <button
           onClick={() => onMarkAttendance('present')}
-          className="flex flex-col items-center gap-2 p-3 bg-green-600 hover:bg-green-700 rounded-lg transition-colors"
+          className="flex flex-col items-center gap-2 p-3 bg-[#4ade80] hover:bg-[#22c55e] rounded-lg transition-colors"
         >
-          <CheckCircle className="w-6 h-6 text-white" />
-          <span className="text-xs text-white font-medium">Present</span>
+          <CheckCircle className="w-6 h-6 text-black" />
+          <span className="text-xs text-black font-medium">Present</span>
         </button>
         <button
           onClick={() => onMarkAttendance('absent')}
@@ -80,7 +80,7 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
         </button>
         <button
           onClick={() => onMarkAttendance('excused')}
-          className="flex flex-col items-center gap-2 p-3 bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+          className="flex flex-col items-center gap-2 p-3 bg-[#3b82f6] hover:bg-[#2563eb] rounded-lg transition-colors"
         >
           <FileText className="w-6 h-6 text-white" />
           <span className="text-xs text-white font-medium">Excused</span>
@@ -108,7 +108,7 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
           </div>
           <div className="flex items-center gap-4 mt-4 text-xs">
             <div className="flex items-center gap-1">
-              <div className="w-3 h-3 bg-green-500 rounded" />
+              <div className="w-3 h-3 bg-[#4ade80] rounded" />
               <span className="text-gray-400">Present</span>
             </div>
             <div className="flex items-center gap-1">
@@ -120,7 +120,7 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
               <span className="text-gray-400">Late</span>
             </div>
             <div className="flex items-center gap-1">
-              <div className="w-3 h-3 bg-blue-500 rounded" />
+              <div className="w-3 h-3 bg-[#3b82f6] rounded" />
               <span className="text-gray-400">Excused</span>
             </div>
           </div>
@@ -134,7 +134,7 @@ export default function AttendanceTracker({ student, onMarkAttendance }: Attenda
         </div>
         <div className="bg-gray-800 rounded-lg p-3 border border-gray-700">
           <p className="text-gray-400 mb-1">Present</p>
-          <p className="text-xl font-bold text-green-400">{presentCount}</p>
+          <p className="text-xl font-bold text-[#4ade80]">{presentCount}</p>
         </div>
       </div>
     </div>

@@ -146,16 +146,19 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black text-white">
-      <div className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-green-500/20 shadow-lg">
+      <div className="bg-gradient-to-r from-black via-gray-900 to-black border-b border-[#4ade80]/20 shadow-lg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <div className="p-3 bg-green-600 rounded-lg">
-                <GraduationCap className="w-8 h-8 text-white" />
+              <div className="p-3 bg-[#4ade80] rounded-lg">
+                <GraduationCap className="w-8 h-8 text-black" />
               </div>
               <div>
-                <h1 className="text-3xl font-bold text-white">Student Grade Tracker</h1>
-                <p className="text-gray-400 text-sm">Manage and analyze student performance</p>
+               <h1 className="text-3xl font-bold bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
+                  Student Grade Tracker
+                </h1>
+
+                <p className="text-white text-sm">Manage and analyze student performance</p>
               </div>
             </div>
             <div className="flex gap-3 flex-wrap">
@@ -163,8 +166,8 @@ function App() {
                 onClick={() => setCurrentView('students')}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all font-medium ${
                   currentView === 'students'
-                    ? 'bg-green-600 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
+                    ? 'bg-[#4ade80] text-black'
+                    : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
                 }`}
               >
                 <GraduationCap className="w-5 h-5" />
@@ -174,8 +177,8 @@ function App() {
                 onClick={() => setCurrentView('analytics')}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all font-medium ${
                   currentView === 'analytics'
-                    ? 'bg-blue-600 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
+                    ? 'bg-[#3b82f6] text-white'
+                    : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
                 }`}
               >
                 <BarChart3 className="w-5 h-5" />
@@ -186,7 +189,7 @@ function App() {
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg transition-all font-medium ${
                   currentView === 'leaderboard'
                     ? 'bg-yellow-600 text-white'
-                    : 'bg-gray-800 text-gray-300 hover:bg-gray-700 border border-gray-700'
+                    : 'bg-gray-900 text-gray-300 hover:bg-gray-800 border border-gray-800'
                 }`}
               >
                 <Trophy className="w-5 h-5" />
@@ -194,14 +197,14 @@ function App() {
               </button>
               <button
                 onClick={() => setShowBulkImport(true)}
-                className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all border border-gray-700"
+                className="flex items-center gap-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-all border border-gray-800"
               >
                 <Upload className="w-5 h-5" />
                 Import
               </button>
               <button
                 onClick={() => exportToCSV(students)}
-                className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-lg transition-all border border-gray-700"
+                className="flex items-center gap-2 px-4 py-2 bg-gray-900 hover:bg-gray-800 text-white rounded-lg transition-all border border-gray-800"
                 disabled={students.length === 0}
               >
                 <Download className="w-5 h-5" />
@@ -212,7 +215,7 @@ function App() {
                   setSelectedStudent(null);
                   setShowStudentForm(true);
                 }}
-                className="flex items-center gap-2 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg transition-all font-medium"
+                className="flex items-center gap-2 px-4 py-2 bg-[#4ade80] hover:bg-[#22c55e] text-black rounded-lg transition-all font-medium"
               >
                 <Plus className="w-5 h-5" />
                 Add Student
@@ -243,13 +246,13 @@ function App() {
                   placeholder="Search by name, roll number, or class..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+                  className="w-full pl-10 pr-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white placeholder-gray-500 focus:ring-2 focus:ring-[#4ade80] focus:border-transparent outline-none transition-all"
                 />
               </div>
               <select
                 value={filterGrade}
                 onChange={(e) => setFilterGrade(e.target.value)}
-                className="px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:ring-2 focus:ring-green-500 focus:border-transparent outline-none transition-all"
+                className="px-4 py-3 bg-gray-900 border border-gray-800 rounded-lg text-white focus:ring-2 focus:ring-[#4ade80] focus:border-transparent outline-none transition-all"
               >
                 <option value="all">All Grades</option>
                 <option value="A+">Grade A+</option>
