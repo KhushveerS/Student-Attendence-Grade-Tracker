@@ -17,7 +17,8 @@ A comprehensive web application for tracking student grades, attendance, and per
 
 ## ScreenShots
 
-<img width="1510" height="749" alt="Screenshot 2025-10-05 220845" src="https://github.com/user-attachments/assets/4ef55226-5194-4250-9c38-6ee8de561fec" />
+<img width="1294" height="768" alt="Screenshot 2025-10-05 225954" src="https://github.com/user-attachments/assets/72186de4-bd44-4ed7-b500-8f296329a0b9" />
+
 
 <img width="1494" height="878" alt="Screenshot 2025-10-05 220910" src="https://github.com/user-attachments/assets/95e3ac4d-49a1-475d-9dd1-ac435d167ad9" />
 
